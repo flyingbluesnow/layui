@@ -208,7 +208,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form', 'util'], function(exports){
       ,'<div id="layui-table-page{{d.index}}"></div>'
     ,'</div>'
     ,'{{# } }}'
-    
+         
     ,'<style>'
     ,'{{# layui.each(d.data.cols, function(i1, item1){'
       ,'layui.each(item1, function(i2, item2){ }}'
@@ -216,6 +216,11 @@ layui.define(['laytpl', 'laypage', 'layer', 'form', 'util'], function(exports){
         ,'{{# if(item2.width){ }}'
           ,'width: {{item2.width}}px;'
         ,'{{# } }}'
+               
+        ,'{{# if(item2.height){ }}'
+          ,'height: {{item2.height}}px;'
+        ,'{{# } }}'
+               
         ,' }'
       ,'{{# });'
     ,'}); }}'
